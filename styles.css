@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loader{
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    transition: all 0.5s ease;
+}
+
+.ring{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.ring:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 50%;
+    border-top-color: black;
+    animation: rotate 2.5s ease infinite;
+}
+
+@keyframes rotate {
+    0%{transform: rotate(720deg);}
+}
+
+
+.start{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.info{
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px;
+    transition: all 1.5s ease;
+}
+
+.bg{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px;
+    transition: all 1.5s ease;    
+}
+
+.belowimg{
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+button{
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    outline: none;
+    background-color: #28a528;
+}
+
+.belowimg button:hover{
+    background-color: #228B22;    
+}
+
+.modal{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 110vh;
+    opacity: 0%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;    
+}
+
+
+.container{
+    margin-top: 50px;
+    width: 90vh;
+    height: 90vh;
+    background-color: blanchedalmond;
+    border-radius: 15px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.2s ease;
+}
+
+.contents, .count, .time{
+    display: flex;
+    font-size: 30px;
+}
+
+.field{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(8, 12.5%);
+    width: 87.5vh;
+    height: 70vh;
+    border: 3px solid black;
+    background-color: darkcyan;
+}
+
+.field-cover{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(8, 12.5%);
+    width: 100%;
+    height: 100%;
+}
+
+.mines{
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mines-cover{
+    font-size: 30px;
+    border: 1.5px solid #228B22;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mines-cover:hover{
+    background-color: rgb(62, 85, 158);
+}
+
+.contents{
+    color:darkgray;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(66, 30, 30);
+    width: 95%;
+    height: 10vh;
+}
+
+ /*///////////// COLORS  ////////////////*/
+.green{
+    background-color: #C3FDB8;
+}
+
+.coral{
+    background-color:#228B22;
+}
+.lightblue{
+    background-color: #CCCCCC;
+}
+
+.darkcyan{
+    background-color:#FFFFFF;
+}
+
+
+/* ________________  END ________________ */
+
+
+@keyframes shake {
+    30%{transform: translateX(-30px);}
+    60%{transform: translateX(30px);}
+    
+}
