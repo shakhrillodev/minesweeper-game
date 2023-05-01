@@ -178,10 +178,8 @@ for(let i=0;i<8;i++){
 for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 10; j++) {
       if (bomb2d[i][j] === '💣') {
-        // update adjacent elements
         for (let x = i - 1; x <= i + 1; x++) {
           for (let y = j - 1; y <= j + 1; y++) {
-            // check if current element is valid and not a bomb
             if (x >= 0 && y >= 0 && x < 8 && y < 10 && bomb2d[x][y] !== '💣') {
               bomb2d[x][y]++;
             }
